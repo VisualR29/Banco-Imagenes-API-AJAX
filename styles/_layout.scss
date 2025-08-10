@@ -1,0 +1,114 @@
+.nav {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding-left: 0;
+
+    &__link {
+        color: $color-muted;
+    }
+
+    &__link:hover {
+        color: $color-text;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: $gap;
+}
+
+.photo-card {
+    @include card;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    &__thumb {
+        aspect-ratio: 4/3;
+        background: #0b0e13;
+        display: grid;
+        place-items: center;
+    }
+
+    &__body {
+        padding: .85rem 1rem;
+        display: grid;
+        gap: .35rem;
+    }
+
+    &__title {
+        font-weight: 600;
+        color: $color-text;
+        margin: 0;
+    }
+
+    &__meta {
+        font-size: .9rem;
+        color: $color-muted;
+    }
+
+    &:focus-within,
+    &:hover {
+        transform: translateY(-2px);
+        transition: transform .15s ease;
+    }
+}
+
+.breadcrumb {
+    list-style: none;
+    display: flex;
+    gap: .5rem;
+    padding-left: 0;
+    margin: 0;
+
+    li::after {
+        content: '/';
+        margin-left: .5rem;
+        color: $color-muted;
+    }
+
+    li:last-child::after {
+        content: '';
+    }
+}
+
+.photo-detail {
+    @include card;
+    padding: 1rem;
+    display: grid;
+    gap: 1rem;
+
+    .hero {
+        border-radius: $radius;
+        overflow: hidden;
+    }
+
+    .info {
+        display: grid;
+        gap: .5rem;
+
+        .title {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .by {
+            color: $color-muted;
+        }
+    }
+}
+
+.stats {
+    @include card;
+    padding: 1rem;
+    display: grid;
+    gap: .5rem;
+
+    .stat {
+        display: grid;
+        grid-template-columns: 160px 1fr;
+        gap: 1rem;
+    }
+}

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Buscador de Imágenes</title>
+    <meta name="description" content="Buscador de imágenes con la API de Unsplash.">
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body>
+    <header class="site-header" role="banner">
+        <div class="container">
+            <h1 class="brand"><a href="index.html">Buscador de Imágenes</a></h1>
+        </div>
+    </header>
+
+    <main id="main" class="container" role="main">
+        <section id="buscar" class="panel" aria-labelledby="buscar-title">
+            <h2 id="buscar-title">Buscar imágenes</h2>
+
+            <form id="searchForm" class="search" role="search" aria-label="Formulario de búsqueda de imágenes">
+                <label for="q" class="sr-only">Término de búsqueda</label>
+                <input id="q" name="q" type="search" placeholder="Ej. mountains, cats, mexico..." required />
+                <button type="submit" class="btn">Buscar</button>
+            </form>
+
+            <div class="meta" id="searchMeta" aria-live="polite"></div>
+
+            <div id="gridSearch" class="grid" aria-live="polite"></div>
+
+            <div class="actions">
+                <button id="loadMoreSearch" class="btn btn--ghost" hidden>Cargar más</button>
+            </div>
+        </section>
+
+        <section id="descubrir" class="panel" aria-labelledby="descubrir-title">
+            <h2 id="descubrir-title">Descubrir</h2>
+            <p class="muted">Explora una selección aleatoria de imágenes.</p>
+            <div id="gridRandom" class="grid" aria-live="polite"></div>
+            <div class="actions">
+                <button id="reloadRandom" class="btn btn--ghost"><a href="#descubrir">Actualizar</a></button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <p>Imágenes por <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="scripts/app.js" type="module"></script>
+</body>
+
+</html>

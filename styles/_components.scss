@@ -1,0 +1,33 @@
+.search {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: .75rem;
+    margin-block: 1rem 1.25rem;
+
+    input[type="search"] {
+        @include card;
+        border: 1px solid rgba(255, 255, 255, .06);
+        padding: .85rem 1rem;
+        color: $color-text;
+        background: #101521;
+        outline: none;
+    }
+}
+
+.btn {
+    border: none;
+    cursor: pointer;
+    padding: .85rem 1rem;
+    border-radius: $radius;
+    font-weight: 600;
+    letter-spacing: .2px;
+    background: $color-primary;
+    color: #0b1020;
+    box-shadow: $shadow;
+
+    &--ghost {
+        background: transparent;
+        color: $color-text;
+        border: 1px solid rgba(255, 255, 255, .12);
+    }
+}

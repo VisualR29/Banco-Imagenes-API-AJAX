@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Buscador de Imágenes</title>
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body>
+    <header class="site-header" role="banner">
+        <div class="container">
+            <h1 class="brand"><a href="index.html">Buscador de Imágenes</a></h1>
+            <nav aria-label="Breadcrumb">
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Inicio</a></li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" role="main">
+        <article id="photoArticle" class="photo-detail" aria-live="polite"></article>
+
+        <section aria-labelledby="stats-title" class="panel">
+            <h2 id="stats-title">Estadísticas</h2>
+            <div id="photoStats" class="stats"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <p>Datos de <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="scripts/app.js" type="module"></script>
+</body>
+
+</html>

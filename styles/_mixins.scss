@@ -1,0 +1,10 @@
+@mixin container {
+    width: min(100% - 2rem, $container);
+    margin-inline: auto;
+}
+
+@mixin card {
+    background: $color-surface;
+    border-radius: $radius;
+    box-shadow: $shadow;
+}
